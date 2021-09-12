@@ -1,0 +1,83 @@
+:root {
+  --cell-size: 70px;
+}
+
+.game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 280px;
+height: 280px;
+
+  border: 1px solid blue;
+  background-color: blue;
+}
+
+.cell {
+  box-sizing: border-box;
+  position: relative;
+
+  width: var(--cell-size);
+  height: var(--cell-size);
+
+  border: 1px solid blue;
+  background-color: paleturquoise;
+}
+
+.character {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+}
+
+.character.goblin {
+  background: url('../img/goblin.png') no-repeat;
+  background-size: cover;
+}
+
+.hammer-hover {
+  cursor: url(../img/hammer-hover.png), auto;
+}
+
+.hammer-click {
+  cursor: url(../img/hammer-click.png), auto;
+}
+
+.result-bonus {
+  width: 100px;
+  padding: 16px;
+}
+
+.result-mistake{
+  width: 100px;
+  padding: 16px;
+}
+
+.container-result {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+
+  border: 1px solid blue;
+}
+
+.button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: paleturquoise;
+
+  cursor: pointer;
+}
